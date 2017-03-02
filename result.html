@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Result</title>
+</head>
+<body>
+	<p>Введите число от 1 до 99</p>
+	<input id="number" type="text">
+	<button type=button onclick="MyFunction()">Click me!</button>
+	<p id="result"></p>
+
+	<script>
+		function MyFunction(){
+			var number, result;
+			number = document.getElementById("number").value;
+
+			if(isNaN(number) || number < 1 || number > 99){
+				result = "Число не верно";	
+			}else{
+				result = "Правильное число";	
+			}
+			document.getElementById("result").innerHTML = result;
+		}
+	</script>
+</body>
+</html>
